@@ -1,5 +1,22 @@
+sfg:
+  brewery:
+    beer-service-host: 'http://localhost:8080'
+
 server:
   port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
 
 logging:
   level:
